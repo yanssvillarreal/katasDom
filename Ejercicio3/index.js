@@ -27,34 +27,34 @@
 // printHereDiv.appendChild(ulElement)
 
 //* 1.4
-// const countries = [
-// { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1' },
-// { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
-// { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
-// { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' },
-// { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' }
-//  ]
-//  const printHereDiv = document.querySelector('div[data-function="printHere"]')
-// countries.forEach((country) => {
-// const newDiv = document.createElement('div')
-// const TitleElement = document.createElement('h4')
-// TitleElement.textContent = country.title
-// const imgElement = document.createElement('img')
-// imgElement.src = country.imgUrl
-// newDiv.appendChild(TitleElement)
-// newDiv.appendChild(imgElement)
-// printHereDiv.appendChild(newDiv)
-// })
+const countries = [
+ { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1' },
+ { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2' },
+ { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3' },
+ { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4' },
+ { title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5' }
+]
+const printHereDiv = document.querySelector('div[data-function="printHere"]')
+countries.forEach((country) => {
+ const newDiv = document.createElement('div')
+ const TitleElement = document.createElement('h4')
+ TitleElement.textContent = country.title
+ const imgElement = document.createElement('img')
+ imgElement.src = country.imgUrl
+ newDiv.appendChild(TitleElement)
+ newDiv.appendChild(imgElement)
+ printHereDiv.appendChild(newDiv)
+})
 
 //* 1.5
 const deleteButton = document.createElement('button')
 deleteButton.textContent = 'Eliminar Último Elemento'
 deleteButton.id = 'deleteButton'
 
-const printHereDiv = document.querySelector('div[data-function="printHere"]')
+const printHere = document.querySelector('div[data-function="printHere"]')
 document.body.appendChild(deleteButton)
 deleteButton.addEventListener('click', () => {
- constdivs = document.querySelectorAll('div[data-function="printHere"] > div')
+ const divs = document.querySelectorAll('div[data-function="printHere"] > div')
  if (divs.length > 0) {
   const lastDiv = divs[divs.length - 1]
   lastDiv.remove()
